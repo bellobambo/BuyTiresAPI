@@ -168,10 +168,10 @@ app.use((err, req, res, next) => {
   });
 });
 
-// PASTE THIS INSTEAD:
-const PORT = 3000;
+// This tells the app to use Render's port, or 3000 if running locally
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on http://127.0.0.1:${PORT}`);
-  console.log(`Health check: http://127.0.0.1:${PORT}/health`);
-  console.log(`✅ Emails will be sent to: didier@mercymobile.tech`);
+  console.log(`Server is running on port ${PORT}`);
+  console.log(`Health check: /health`);
 });
