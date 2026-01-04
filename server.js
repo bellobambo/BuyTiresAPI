@@ -79,7 +79,7 @@ app.post("/send-lead", async (req, res) => {
 
     // Send email using Resend API
     const { data, error } = await resend.emails.send({
-      from: 'TireConnect <onboarding@resend.dev>', // Will use your verified domain later
+      from: 'TireConnect <didier@mercymobile.tech>', // Will use your verified domain later
       to: ['didier@mercymobile.tech'],
       replyTo: email,
       subject: ` New Tire Lead: ${name} (${searchType})`,
